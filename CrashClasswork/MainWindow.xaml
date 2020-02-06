@@ -7,6 +7,12 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="73*"/>
+            <ColumnDefinition Width="125*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="Help" HorizontalAlignment="Left" Margin="92,43,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <Button x:Name="SeeAssets" Content="SeeAssets" HorizontalAlignment="Left" Margin="189,39,0,0" VerticalAlignment="Top" Width="75" Click="SeeAssets_Click"/>
+
     </Grid>
 </Window>
