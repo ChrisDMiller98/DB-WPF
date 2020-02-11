@@ -236,8 +236,8 @@ namespace CrashClasswork {
             this.tableEmployees = new EmployeesDataTable();
             base.Tables.Add(this.tableEmployees);
             this.relationEmployeesAssets = new global::System.Data.DataRelation("EmployeesAssets", new global::System.Data.DataColumn[] {
-                        this.tableEmployees.Employee_IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableAssets.Emplyee_IDColumn}, false);
+                        this.tableEmployees.EmployeeIDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableAssets.EmployeeIDColumn}, false);
             this.Relations.Add(this.relationEmployeesAssets);
         }
         
@@ -321,7 +321,7 @@ namespace CrashClasswork {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class AssetsDataTable : global::System.Data.TypedTableBase<AssetsRow> {
             
-            private global::System.Data.DataColumn columnEmplyee_ID;
+            private global::System.Data.DataColumn columnEmployeeID;
             
             private global::System.Data.DataColumn columnAssetID;
             
@@ -362,9 +362,9 @@ namespace CrashClasswork {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Emplyee_IDColumn {
+            public global::System.Data.DataColumn EmployeeIDColumn {
                 get {
-                    return this.columnEmplyee_ID;
+                    return this.columnEmployeeID;
                 }
             }
             
@@ -452,7 +452,7 @@ namespace CrashClasswork {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnEmplyee_ID = base.Columns["Emplyee ID"];
+                this.columnEmployeeID = base.Columns["EmployeeID"];
                 this.columnAssetID = base.Columns["AssetID"];
                 this.columnDescription = base.Columns["Description"];
             }
@@ -460,8 +460,8 @@ namespace CrashClasswork {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnEmplyee_ID = new global::System.Data.DataColumn("Emplyee ID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnEmplyee_ID);
+                this.columnEmployeeID = new global::System.Data.DataColumn("EmployeeID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEmployeeID);
                 this.columnAssetID = new global::System.Data.DataColumn("AssetID", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnAssetID);
                 this.columnDescription = new global::System.Data.DataColumn("Description", typeof(string), null, global::System.Data.MappingType.Element);
@@ -601,7 +601,7 @@ namespace CrashClasswork {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class EmployeesDataTable : global::System.Data.TypedTableBase<EmployeesRow> {
             
-            private global::System.Data.DataColumn columnEmployee_ID;
+            private global::System.Data.DataColumn columnEmployeeID;
             
             private global::System.Data.DataColumn columnFirstName;
             
@@ -642,9 +642,9 @@ namespace CrashClasswork {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Employee_IDColumn {
+            public global::System.Data.DataColumn EmployeeIDColumn {
                 get {
-                    return this.columnEmployee_ID;
+                    return this.columnEmployeeID;
                 }
             }
             
@@ -701,10 +701,10 @@ namespace CrashClasswork {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public EmployeesRow AddEmployeesRow(int Employee_ID, string FirstName, string LastName) {
+            public EmployeesRow AddEmployeesRow(int EmployeeID, string FirstName, string LastName) {
                 EmployeesRow rowEmployeesRow = ((EmployeesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Employee_ID,
+                        EmployeeID,
                         FirstName,
                         LastName};
                 rowEmployeesRow.ItemArray = columnValuesArray;
@@ -714,9 +714,9 @@ namespace CrashClasswork {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public EmployeesRow FindByEmployee_ID(int Employee_ID) {
+            public EmployeesRow FindByEmployeeID(int EmployeeID) {
                 return ((EmployeesRow)(this.Rows.Find(new object[] {
-                            Employee_ID})));
+                            EmployeeID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -736,7 +736,7 @@ namespace CrashClasswork {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnEmployee_ID = base.Columns["Employee ID"];
+                this.columnEmployeeID = base.Columns["EmployeeID"];
                 this.columnFirstName = base.Columns["FirstName"];
                 this.columnLastName = base.Columns["LastName"];
             }
@@ -744,16 +744,16 @@ namespace CrashClasswork {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnEmployee_ID = new global::System.Data.DataColumn("Employee ID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnEmployee_ID);
+                this.columnEmployeeID = new global::System.Data.DataColumn("EmployeeID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEmployeeID);
                 this.columnFirstName = new global::System.Data.DataColumn("FirstName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFirstName);
                 this.columnLastName = new global::System.Data.DataColumn("LastName", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnLastName);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnEmployee_ID}, true));
-                this.columnEmployee_ID.AllowDBNull = false;
-                this.columnEmployee_ID.Unique = true;
+                                this.columnEmployeeID}, true));
+                this.columnEmployeeID.AllowDBNull = false;
+                this.columnEmployeeID.Unique = true;
                 this.columnFirstName.MaxLength = 255;
                 this.columnLastName.MaxLength = 255;
             }
@@ -898,17 +898,17 @@ namespace CrashClasswork {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int Emplyee_ID {
+            public int EmployeeID {
                 get {
                     try {
-                        return ((int)(this[this.tableAssets.Emplyee_IDColumn]));
+                        return ((int)(this[this.tableAssets.EmployeeIDColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Emplyee ID\' in table \'Assets\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'EmployeeID\' in table \'Assets\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableAssets.Emplyee_IDColumn] = value;
+                    this[this.tableAssets.EmployeeIDColumn] = value;
                 }
             }
             
@@ -957,14 +957,14 @@ namespace CrashClasswork {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsEmplyee_IDNull() {
-                return this.IsNull(this.tableAssets.Emplyee_IDColumn);
+            public bool IsEmployeeIDNull() {
+                return this.IsNull(this.tableAssets.EmployeeIDColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetEmplyee_IDNull() {
-                this[this.tableAssets.Emplyee_IDColumn] = global::System.Convert.DBNull;
+            public void SetEmployeeIDNull() {
+                this[this.tableAssets.EmployeeIDColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1008,12 +1008,12 @@ namespace CrashClasswork {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int Employee_ID {
+            public int EmployeeID {
                 get {
-                    return ((int)(this[this.tableEmployees.Employee_IDColumn]));
+                    return ((int)(this[this.tableEmployees.EmployeeIDColumn]));
                 }
                 set {
-                    this[this.tableEmployees.Employee_IDColumn] = value;
+                    this[this.tableEmployees.EmployeeIDColumn] = value;
                 }
             }
             
@@ -1278,7 +1278,7 @@ namespace CrashClasswork.EmployeesDataSetTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Assets";
-            tableMapping.ColumnMappings.Add("Emplyee ID", "Emplyee ID");
+            tableMapping.ColumnMappings.Add("Emplyee ID", "EmployeeID");
             tableMapping.ColumnMappings.Add("AssetID", "AssetID");
             tableMapping.ColumnMappings.Add("Description", "Description");
             this._adapter.TableMappings.Add(tableMapping);
@@ -1522,7 +1522,7 @@ namespace CrashClasswork.EmployeesDataSetTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Employees";
-            tableMapping.ColumnMappings.Add("Employee ID", "Employee ID");
+            tableMapping.ColumnMappings.Add("Employee ID", "EmployeeID");
             tableMapping.ColumnMappings.Add("FirstName", "FirstName");
             tableMapping.ColumnMappings.Add("LastName", "LastName");
             this._adapter.TableMappings.Add(tableMapping);
@@ -1752,14 +1752,6 @@ namespace CrashClasswork.EmployeesDataSetTableAdapters {
                     this.Adapter.UpdateCommand.Connection.Close();
                 }
             }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string FirstName, string LastName, int Original_Employee_ID, string Original_FirstName, string Original_LastName) {
-            return this.Update(Original_Employee_ID, FirstName, LastName, Original_Employee_ID, Original_FirstName, Original_LastName);
         }
     }
     

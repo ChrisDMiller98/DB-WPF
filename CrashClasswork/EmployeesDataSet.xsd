@@ -29,7 +29,7 @@
               </DbSource>
             </MainSource>
             <Mappings>
-              <Mapping SourceColumn="Emplyee ID" DataSetColumn="Emplyee ID" />
+              <Mapping SourceColumn="Emplyee ID" DataSetColumn="EmployeeID" />
               <Mapping SourceColumn="AssetID" DataSetColumn="AssetID" />
               <Mapping SourceColumn="Description" DataSetColumn="Description" />
             </Mappings>
@@ -84,7 +84,7 @@
               </DbSource>
             </MainSource>
             <Mappings>
-              <Mapping SourceColumn="Employee ID" DataSetColumn="Employee ID" />
+              <Mapping SourceColumn="Employee ID" DataSetColumn="EmployeeID" />
               <Mapping SourceColumn="FirstName" DataSetColumn="FirstName" />
               <Mapping SourceColumn="LastName" DataSetColumn="LastName" />
             </Mappings>
@@ -98,10 +98,10 @@
   <xs:element name="EmployeesDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="EmployeesDataSet" msprop:Generator_UserDSName="EmployeesDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Assets" msprop:Generator_TableClassName="AssetsDataTable" msprop:Generator_TableVarName="tableAssets" msprop:Generator_TablePropName="Assets" msprop:Generator_RowDeletingName="AssetsRowDeleting" msprop:Generator_RowChangingName="AssetsRowChanging" msprop:Generator_RowEvHandlerName="AssetsRowChangeEventHandler" msprop:Generator_RowDeletedName="AssetsRowDeleted" msprop:Generator_UserTableName="Assets" msprop:Generator_RowChangedName="AssetsRowChanged" msprop:Generator_RowEvArgName="AssetsRowChangeEvent" msprop:Generator_RowClassName="AssetsRow">
+        <xs:element name="Assets" msprop:Generator_TableClassName="AssetsDataTable" msprop:Generator_TableVarName="tableAssets" msprop:Generator_RowChangedName="AssetsRowChanged" msprop:Generator_TablePropName="Assets" msprop:Generator_RowDeletingName="AssetsRowDeleting" msprop:Generator_RowChangingName="AssetsRowChanging" msprop:Generator_RowEvHandlerName="AssetsRowChangeEventHandler" msprop:Generator_RowDeletedName="AssetsRowDeleted" msprop:Generator_RowClassName="AssetsRow" msprop:Generator_UserTableName="Assets" msprop:Generator_RowEvArgName="AssetsRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Emplyee_x0020_ID" msprop:Generator_ColumnVarNameInTable="columnEmplyee_ID" msprop:Generator_ColumnPropNameInRow="Emplyee_ID" msprop:Generator_ColumnPropNameInTable="Emplyee_IDColumn" msprop:Generator_UserColumnName="Emplyee ID" type="xs:int" minOccurs="0" />
+              <xs:element name="EmployeeID" msprop:Generator_ColumnVarNameInTable="columnEmployeeID" msprop:Generator_ColumnPropNameInRow="EmployeeID" msprop:Generator_ColumnPropNameInTable="EmployeeIDColumn" msprop:Generator_UserColumnName="EmployeeID" type="xs:int" minOccurs="0" />
               <xs:element name="AssetID" msprop:Generator_ColumnVarNameInTable="columnAssetID" msprop:Generator_ColumnPropNameInRow="AssetID" msprop:Generator_ColumnPropNameInTable="AssetIDColumn" msprop:Generator_UserColumnName="AssetID" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -119,10 +119,10 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Employees" msprop:Generator_TableClassName="EmployeesDataTable" msprop:Generator_TableVarName="tableEmployees" msprop:Generator_TablePropName="Employees" msprop:Generator_RowDeletingName="EmployeesRowDeleting" msprop:Generator_RowChangingName="EmployeesRowChanging" msprop:Generator_RowEvHandlerName="EmployeesRowChangeEventHandler" msprop:Generator_RowDeletedName="EmployeesRowDeleted" msprop:Generator_UserTableName="Employees" msprop:Generator_RowChangedName="EmployeesRowChanged" msprop:Generator_RowEvArgName="EmployeesRowChangeEvent" msprop:Generator_RowClassName="EmployeesRow">
+        <xs:element name="Employees" msprop:Generator_TableClassName="EmployeesDataTable" msprop:Generator_TableVarName="tableEmployees" msprop:Generator_RowChangedName="EmployeesRowChanged" msprop:Generator_TablePropName="Employees" msprop:Generator_RowDeletingName="EmployeesRowDeleting" msprop:Generator_RowChangingName="EmployeesRowChanging" msprop:Generator_RowEvHandlerName="EmployeesRowChangeEventHandler" msprop:Generator_RowDeletedName="EmployeesRowDeleted" msprop:Generator_RowClassName="EmployeesRow" msprop:Generator_UserTableName="Employees" msprop:Generator_RowEvArgName="EmployeesRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Employee_x0020_ID" msprop:Generator_ColumnVarNameInTable="columnEmployee_ID" msprop:Generator_ColumnPropNameInRow="Employee_ID" msprop:Generator_ColumnPropNameInTable="Employee_IDColumn" msprop:Generator_UserColumnName="Employee ID" type="xs:int" />
+              <xs:element name="EmployeeID" msprop:Generator_ColumnVarNameInTable="columnEmployeeID" msprop:Generator_ColumnPropNameInRow="EmployeeID" msprop:Generator_ColumnPropNameInTable="EmployeeIDColumn" msprop:Generator_UserColumnName="EmployeeID" type="xs:int" />
               <xs:element name="FirstName" msprop:Generator_ColumnVarNameInTable="columnFirstName" msprop:Generator_ColumnPropNameInRow="FirstName" msprop:Generator_ColumnPropNameInTable="FirstNameColumn" msprop:Generator_UserColumnName="FirstName" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -144,12 +144,12 @@
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:Employees" />
-      <xs:field xpath="mstns:Employee_x0020_ID" />
+      <xs:field xpath="mstns:EmployeeID" />
     </xs:unique>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="EmployeesAssets" msdata:parent="Employees" msdata:child="Assets" msdata:parentkey="Employee_x0020_ID" msdata:childkey="Emplyee_x0020_ID" msprop:Generator_UserChildTable="Assets" msprop:Generator_ChildPropName="GetAssetsRows" msprop:Generator_UserRelationName="EmployeesAssets" msprop:Generator_RelationVarName="relationEmployeesAssets" msprop:Generator_UserParentTable="Employees" msprop:Generator_ParentPropName="EmployeesRow" />
+      <msdata:Relationship name="EmployeesAssets" msdata:parent="Employees" msdata:child="Assets" msdata:parentkey="EmployeeID" msdata:childkey="EmployeeID" msprop:Generator_UserChildTable="Assets" msprop:Generator_ChildPropName="GetAssetsRows" msprop:Generator_UserRelationName="EmployeesAssets" msprop:Generator_ParentPropName="EmployeesRow" msprop:Generator_RelationVarName="relationEmployeesAssets" msprop:Generator_UserParentTable="Employees" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>
